@@ -185,6 +185,40 @@ footer div h3{
 .swal2-styled.swal2-confirm{
     background-color: var(--verde2) !important;
 }
+.hidden {
+    display: none !important;
+}
+
+.menu-desplegable {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100vw; 
+    background-color: var(--verde1);
+    padding: 1em;
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+}
+.menus{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+}
+
+
+
+
+.menu-btn {
+    display: none;
+
+}
+
+
+
 
 
 
@@ -207,4 +241,23 @@ section{
     header img{
         width: 50%;
     }
+    .menu-inicial{
+        display: none !important;
+    }
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+    footer p{
+        font-size: 10px;
+    }
+    .footer1 div h3{
+        margin-right: 50px;
+        font-size: 40px;
+    }
+
+
+
+
+    
 }

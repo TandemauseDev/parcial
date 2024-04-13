@@ -17,17 +17,31 @@
 </head>
 <body>
    
-<nav class="menu">
-    <a class="logo" href="">Electve</a>
-        <ul>
+    <nav class="menu">
+        <a class="logo" href="">Electve</a>
+        <ul class="menu-inicial">
+            <a href="#ofertas"><li>Ofertas</li></a>
+            <a href="#scooter"> <li>Scooter</li></a>
+            <a href="#Autos"> <li>Autos</li></a>
+        </ul>
+        <a class="iniciar menu-inicial" href="">Iniciar sesión</a>
+    
+        <!-- Botón para desplegar el menú en dispositivos móviles -->
+        <button id="menu-btn" style="background: none; border: none; font-size: 40px;" class="menu-btn">☰</button>
+
+        <div class="menu-desplegable hidden">
+            <ul class="menus" >
                 <a href="#ofertas"><li>Ofertas</li></a>
                 <a href="#scooter"> <li>Scooter</li></a>
                 <a href="#Autos"> <li>Autos</li></a>
-                
-                
-        </ul>
-     <a class="iniciar" href=""> Iniciar sesion</a>
-</nav>
+            </ul>
+
+        </div>
+
+    
+
+    </nav>
+    
 <header>
     <div class="titulo">
         <h1>
@@ -157,6 +171,18 @@
 </footer>
 
     <script>
+
+
+document.getElementById("menu-btn").addEventListener("click", function() {
+    var menuDesplegable = document.querySelector(".menu-desplegable");
+    menuDesplegable.classList.toggle("hidden"); // Alternar la clase 'hidden'
+});
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
