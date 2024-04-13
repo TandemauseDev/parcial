@@ -247,6 +247,7 @@ section{
     .menu-btn {
         display: block;
         cursor: pointer;
+        color: var(--verde2);
     }
     footer p{
         font-size: 10px;
