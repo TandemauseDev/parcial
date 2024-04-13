@@ -11,6 +11,8 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -39,7 +41,7 @@
     </div>
 </header>
 
-<section>
+<section class="ofertas">
     <h2 style=" text-align: center;">
         Ofertas
     </h2>
@@ -112,6 +114,7 @@
             <img src="img/image-removebg-preview (11) 1.png" alt="">
     
         </div>
+        
 
 
     </div>
@@ -122,9 +125,13 @@
 </section>
 
 <footer>
-    <div>
+    <div class="footer1">
         <div>
+            <h3>
             Electve
+
+                
+            </h3>
 
         </div>
         <div>
@@ -140,7 +147,7 @@
         </div>
 
     </div>
-    <div>
+    <div class="footer2">
         <p>"electve":⸻© 2024 Electve. Todos los derechos reservados.</p>
 
 
@@ -149,8 +156,47 @@
 
 </footer>
 
-    
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const productos = document.querySelectorAll('.producto');
+
+    productos.forEach(producto => {
+        producto.addEventListener('click', function() {
+            Swal.fire({
+                title: '<h1 class="producto-letra">EV 1LT</h1>',
+                html: '<img src="img/image-removebg-preview (11) 1.png" alt=""><div class="pop-up-contenido"><div class="info"><h3>Año: 2024 <br> Segmento: SUV <br> Nº de puertas: 5 <br> Nº de plazas: 5 <br> Nº de maleteros: 1</h3></div><div><h2>100$</h2><h3>Reserva lo ahora mismo <br> a un increíble precio</h3></div></div>',
+                confirmButtonText: 'Reservar',
+                showCloseButton: true,
+                confirmButtonColor: '#007F73',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: '<h1 class="producto-letra">EV 1LT</h1>',
+                        html: '<h2 class="titulo-pop-up-text">Estás a punto de reservar este auto <br> confirma tus datos</h2><div class="pop-up-contenido"><div class="info"><input class="input-popup" placeholder="Nombre" type="text" name="" id=""><input class="input-popup"  placeholder="Apellido" type="text" name="" id=""><input class="input-popup" placeholder="Correo electrónico" type="text" name="" id=""></div><div><input class="input-popup"  placeholder="Teléfono"type="text" name="" id=""><input class="input-popup" placeholder="Dirección" type="text" name="" id=""><input class="input-popup" placeholder="Ciudad" type="text" name="" id=""></div></div>',
+                        showCloseButton: true,
+                        confirmButtonText: 'Confirmar Reserva',
+                        confirmButtonColor: '#007F73',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire({
+                                title: '¡Reserva confirmada!',
+                                text: 'Tu reserva ha sido confirmada satisfactoriamente.',
+                                icon: 'success'
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    });
+});
+
+
+
+    </script>
+
 </body>
 
 </html>

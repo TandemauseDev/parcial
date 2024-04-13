@@ -24,6 +24,9 @@ body{
 
 
 }
+nav a{
+    color: var(--verde2);
+}
 
 .menu{
     width: 100%;
@@ -82,6 +85,12 @@ header div h1 span:last-child{
 .carros h2 span:last-child{
     color: var(--verde2)
 }
+.carros{ 
+    color: var(--amarillo1) !important; 
+}
+.scooter{
+    color: var(--verde2);
+}
 header h1{
     color: var(--amarillo1);
     font-size: 50px;
@@ -91,7 +100,7 @@ header h1{
    
 }
 h2{
-    color: var(--verde2);
+
     margin-bottom: 5%;
 }
 .producto{
@@ -99,6 +108,7 @@ h2{
     padding: 3%;
     border-radius: 30px;
     box-shadow: 5px 5px 5px #888686;
+    cursor: pointer;
 
 }
 .ofert{
@@ -109,8 +119,92 @@ h2{
     margin-left: 2%;
 
 }
+.ofertas{
+    color: var(--verde2);
+}
+.footer1{
+    background-color: var(--verde1);
+    padding: 10%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer2{
+    background-color: var(--verde2);
+    padding: 3%;
+
+}
+footer div h3{
+    font-size: 50px;
+    color: var(--amarillo1);
+}
+.footer1 div p{
+    color: var(--verde2);
+    font-weight: bold;
+
+
+}
+.footer2 p{
+    color: var(--verde1);
+}
+.swal2-popup{
+    background-color: var(--amarillo2) !important;
+}
+.producto-letra{
+    color: var(--verde2);
+}
+.pop-up-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.info h3{
+    text-align: left;
+
+    
+}
+.pop-up-contenido div h3{
+    font-size: 16px;
+    color: var(--verde2);
+}
+.swal2-confirm{
+    border-radius: 30px !important;
+}
+.titulo-pop-up-text{
+    font-size: 20px !important;
+    color: var(--verde2);
+}
+.input-popup{
+   border-radius: 30px;
+   border: none;
+   height: 30px;
+   margin-top: 10px;
+}
+.swal2-styled.swal2-confirm{
+    background-color: var(--verde2) !important;
+}
+
 
 
 section{
     margin-top: 10%;
+}
+
+@media screen and (max-width: 768px) { 
+    .ofert {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    .producto{
+        margin-top: 4%;
+    }
+    header{
+        flex-direction: column;
+    }
+    header img{
+        width: 50%;
+    }
 }
